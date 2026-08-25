@@ -4,42 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>table</title>
+    <title>جدول دانشجویان</title>
+    <link rel="stylesheet" href="node_modules/vazirmatn/misc/Farsi-Digits/Vazirmatn-FD-font-face.css">
+
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Vazirmatn FD;
+            direction: rtl;
+        }
         table{
             width: 50%;
             margin: 5px auto;
+            border-collapse: collapse;
         }
-        td,tr{
-            border:1px solid black
+        th,td,tr{
+            /* border:1px solid black */
         }
+        th{
+            padding: 12px;
+            background-color: rgb(100,100,100);
+            color: #f2f2f2;
+            font-size: 23px;
+        }
+
         td{
+            padding: 10px;
             text-align: center;
+        }
+        tr:nth-child(odd){
+            background-color  :  #eee;
+        }
+        #grade{
+            width: 10%;
+        }
+        #fullname{
+            width: 50%;
+        }
+        #ssn{
+            width: 40%;
         }
     </style>
 </head>
 <body>
     <table>
-        <tr>
-            <th>name</th>
-            <th>ssn</th>
-            <th>grade</th>
+        <thead>
+            <!-- OMID: table row(tr) -->
+            <tr>
+            <!-- OMID: table header(th) -->
+            <th id="fullname">نام و نام خانوادگی</th>
+            <th id="ssn">شماره ملی</th>
+            <th id="grade">درجه</th>
         </tr>
-        <tr>
-            <td>Omid Lak</td>
-            <td>123456789</td>
-            <td>A+</td>
-        </tr>
-        <tr>
-            <td>Jone Doe</td>
-            <td>32256698898</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Jane Doe</td>
-            <td>56456456454</td>
-            <td>A+</td>
-        </tr>
+        </thead>
+        <tbody>
+            <!-- OMID: table data(td) -->
+            <tr>
+                <td><a href="files/file.pdf"> امید لک مظاهری</a>  </td>
+                <td>1234554545</td>
+                <td>الف +</td>
+            </tr>
+            <tr>
+                <td>جان داو</td>
+                <td>32256698898</td>
+                <td>الف</td>
+            </tr>
+            <tr>
+                <td>جین داو</td>
+                <td>56456456454</td>
+                <td>ب</td>
+            </tr>
+            <tr>
+                <td> جانت داو  </td>
+                <td>56456456454</td>
+                <td>ب</td>
+            </tr>
+        </tbody>
+        
     </table>
     
 </body>
